@@ -2,7 +2,7 @@ function rot13(str) {
     let newStr = str.split('');
     console.log(newStr);
     let reg = /[A-Z]/;
-    let sypher = [];
+    let cipher = [];
     for(let i = 0; i <= newStr.length - 1; i++){
         let result = reg.test(newStr[i]);
         if(result === true){
@@ -11,10 +11,10 @@ function rot13(str) {
            if(newChar < 65){
                 newChar = 90 - (64 - newChar);
            }
-            sypher.push(String.fromCharCode(newChar));
+            cipher.push(String.fromCharCode(newChar));
         }
         else {
-            sypher.push(newStr[i]);
+            cipher.push(newStr[i]);
         }
     }
     return sypher.join('');
