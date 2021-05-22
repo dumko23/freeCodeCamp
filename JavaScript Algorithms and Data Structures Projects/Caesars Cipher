@@ -1,0 +1,23 @@
+function rot13(str) {
+    let newStr = str.split('');
+    console.log(newStr);
+    let reg = /[A-Z]/;
+    let sypher = [];
+    for(let i = 0; i <= newStr.length - 1; i++){
+        let result = reg.test(newStr[i]);
+        if(result === true){
+           let newChar = newStr[i].charCodeAt(0) - 13;
+           console.log(newChar);
+           if(newChar < 65){
+                newChar = 90 - (64 - newChar);
+           }
+            sypher.push(String.fromCharCode(newChar));
+        }
+        else {
+            sypher.push(newStr[i]);
+        }
+    }
+    return sypher.join('');
+}
+
+console.log(rot13("SERR PBQR PNZC"));
