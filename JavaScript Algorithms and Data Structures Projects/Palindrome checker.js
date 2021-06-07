@@ -24,4 +24,4 @@ function palindrome(str) {
     return true;
 }
 
-console.log(palindrome("A man, a plan, a canal. Panama"));
+console.log(palindrome("A man, a plan, a canal. Panama"));  //Return true if the given string is a palindrome. Otherwise, return false.
