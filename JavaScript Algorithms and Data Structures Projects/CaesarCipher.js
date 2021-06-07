@@ -3,8 +3,7 @@ function rot13(str) {
     let reg = /[A-Z]/;
     let cipher = [];
     for(let i = 0; i <= newStr.length - 1; i++){
-        let result = reg.test(newStr[i]);
-        if(result === true){
+        if(reg.test(newStr[i])){
            let newChar = newStr[i].charCodeAt(0) - 13;
            if(newChar < 65){
                 newChar = 90 - (64 - newChar);
