@@ -1,0 +1,33 @@
+body {
+    font-family: system-ui, sans-serif;
+    background: #f06d06;
+    color: white;
+    text-align: center;
+}
+
+#image {
+    max-width: 100%;
+    display: block;
+    height: auto;
+    margin: 0 auto;
+}
+#img-div {
+    background: DarkOrange;
+    padding: 10px;
+    margin: 0 10px;
+}
+
+#img-caption {
+    margin: 15px 0 5px 0;
+}
+
+ul {
+    max-width: 750px;
+    margin: 0 auto 50px auto;
+    text-align: left;
+    line-height: 1.6;
+}
+
+li {
+    margin: 16px 0;
+}
