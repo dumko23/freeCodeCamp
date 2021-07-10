@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Caesar Cipher</title>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<div id="main">
+    <div class="container" id="header">
+        <h3>Let's convert text to ROT-N and back!</h3>
+
+    </div>
+    <div class="container" id="inputDiv">
+        <div class="container" id="inputRegularDiv">
+            <h3>Write something like you always do!</h3>
+            <form>
+                <label title="From 1 to 26">
+                    <input id="toRotN" type="number" placeholder="Choose your N" max="26" min="1" step="1" onkeydown="return false;" required>
+                </label>
+                <label title="Up to 445 symbols">
+                    <input id="toRotText" type="text" maxlength="445" placeholder="Write something" required>
+                </label>
+                <button id="convToRot" onclick="inputText = document.getElementById('toRotText').value; toRot = document.getElementById('toRotN').value; toRot13(inputText, toRot); printResult(); return false;">Convert!</button>
+            </form>
+        </div>
+        <div class="container" id="inputRot13Div">
+            <h3>Paste some encrypted text here!</h3>
+            <form>
+                <label title="From 1 to 26">
+                    <input id="fromRotN" type="number" placeholder="Choose your N" max="26" min="1" step="1" onkeydown="return false;" required>
+                </label>
+                <label title="Up to 445 symbols">
+                    <input id="fromRotText" type="text" maxlength="445" placeholder="Paste your encrypted text" required>
+                </label>
+                <button id="convFromRot" onclick="inputText = document.getElementById('fromRotText').value; fromRot = document.getElementById('fromRotN').value; fromRot13(inputText, fromRot); printResult(); return false;">Convert!</button>
+            </form>
+        </div>
+    </div>
+    <div class="container" id="outputGeneral">
+        <h3>Converted text:</h3>
+        <div id="resultDiv">
+            <!-- <p></p> -->
+        </div>
+    </div>
+    <footer>by Dima Parkhomenko</footer>
+</div>
+</body>
+</html>

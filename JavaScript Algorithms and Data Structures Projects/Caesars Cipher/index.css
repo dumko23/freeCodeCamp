@@ -1,0 +1,51 @@
+#main{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container{
+    width: 400px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#outputGeneral{
+    padding-top: 5px;
+}
+#resultDiv{
+    padding: 10px;
+    border: 2px solid black;
+    height: 150px;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+}
+input{
+    padding: 10px 50px;
+    width: 100%;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 5px 0;
+}
+#inputDiv{
+    flex-direction: row;
+    width: 800px;
+}
+button{
+    padding: 10px 50px;
+    border-radius: 3px;
+    display: block;
+    width: 100%;
+    margin: 5px 0;
+}
+footer{
+    position: absolute;
+    bottom: 0;
+}
