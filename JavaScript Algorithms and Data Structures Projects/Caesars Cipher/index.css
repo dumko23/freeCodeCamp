@@ -1,0 +1,56 @@
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+
+}
+#main{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.component{
+    width: 400px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#inputDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    /*border: 2px solid black;*/
+}
+h3{
+    text-align: center;
+}
+#results{
+    border: 2px solid black;
+    height: 100px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+input{
+    padding: 10px 50px;
+    width: 100%;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    text-align: center;
+}
+button{
+    padding: 10px 50px;
+    border-radius: 3px;
+    display: block;
+    width: 100%;
+}
+footer{
+    position: absolute;
+    bottom: 0;
+}
