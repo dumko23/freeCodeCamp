@@ -7,18 +7,13 @@ function firstCheck() {
     if(input ===''){
         return result = 'Try to write some number!'
     } else if(input > 3999 || input < 1){
-        //console.log('1') //точки для отлова ошибок
         return result = "The number should be more than 0 and less than 4000!"
     } else {
-        //console.log('2')
         return convertToRoman(input);
     }
 }
-
 function convertToRoman(num) {
-    //console.log(num);
     let str = num.toString();
-    //console.log(str);
     let newArr = [];
     newArr.unshift(arr2[arr3.indexOf(str[str.length - 1])]);
     newArr.unshift(arr2[arr3.indexOf(str[str.length - 2]+'0')]);
@@ -28,15 +23,12 @@ function convertToRoman(num) {
             newArr.unshift(arr2[arr2.length-1])
         }
     }
-    //console.log('3')
     return result = newArr.join('');
 }
-
 function printResult(){
     if(document.getElementById('results').hasChildNodes) {
         document.getElementById('results').removeChild(document.getElementById('results').lastChild);
     }
-    //console.log(result)
     let resultContent = document.createElement('p');
     resultContent.textContent = result;
     document.getElementById('results').appendChild(resultContent);
