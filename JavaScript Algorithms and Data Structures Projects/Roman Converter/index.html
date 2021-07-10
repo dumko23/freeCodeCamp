@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Roman Converter</title>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<div id="main">
+    <div class="component" id="inputDiv">
+        <h3>Let's convert some numbers into Romans!</h3>
+        <form>
+            <label for="number">
+                <input id="number" type="number" placeholder="Input the number to convert" min="1" max="1000" maxlength="4" autocomplete="off" onKeyPress="if(this.value.length===4) return false;" required>
+            </label>
+            <button type="submit" onclick="input = document.getElementById('number').value; firstCheck();  printResult(); return false;" >Convert!</button>
+        </form>
+    </div>
+    <div class="component" id="output">
+        <h3>Result:</h3>
+        <div id="results">
+            <p></p>
+        </div>
+    </div>
+    <footer>by Dima Parkhomenko</footer>
+</div>
+</body>
+</html>
