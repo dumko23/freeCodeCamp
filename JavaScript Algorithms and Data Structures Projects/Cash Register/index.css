@@ -36,8 +36,18 @@ table{
     margin: 10px;
 }
 #cidDiv{
-    margin: 0 15px;
+    width: 200px;
+    margin: 0 10px;
 }
 #drawDiv{
-    margin: 0 15px;
+    width: 200px;
+    margin: 0 10px;
+}
+#totalDiv{
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+}
+#total{
+    margin-left: 10px;
 }
