@@ -1,0 +1,43 @@
+table{
+    border: 2px solid black;
+    width: 200px;
+}
+
+.cidTd{
+    text-align: center;
+}
+#main{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.inputDiv{
+    flex-direction: column;
+    width: 200px;
+    display: flex;
+}
+#inputDiv{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+#btnDiv{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+#changeDiv{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+    margin: 10px;
+}
+#cidDiv{
+    margin: 0 15px;
+}
+#drawDiv{
+    margin: 0 15px;
+}
