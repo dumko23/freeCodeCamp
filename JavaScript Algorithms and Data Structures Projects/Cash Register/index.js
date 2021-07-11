@@ -12,6 +12,7 @@ let drawObj = {
 
 function checkCashRegister(price, cash) {
     let change = cash - price;
+    document.getElementById('total').innerHTML = change;
     let hundred = ["ONE HUNDRED", Math.floor(change / 100) * 100];
     let twenty = ["TWENTY", Math.floor((change - hundred[1]) / 20) * 20];
     let ten = ["TEN", Math.floor((change - hundred[1] - twenty[1]) / 10) * 10];
@@ -77,9 +78,6 @@ function statusPrint(){
     document.getElementById('statusId').innerHTML = drawObj.status;
 }
 
-/*console.log(checkCashRegister(2, 10, [["PENNY", 3], ["NICKEL", 5], ["DIME", 6], ["QUARTER", 4],
-    ["ONE", 10], ["FIVE", 5], ["TEN", 4], ["TWENTY", 5], ["ONE HUNDRED", 2]]));*/
-
 function drawPrint(){
     if(document.getElementById('drawTable').hasChildNodes()){
         document.getElementById('drawTable').removeChild(document.getElementById('drawTable').lastChild);
@@ -95,7 +93,7 @@ function drawPrint(){
     tr1.appendChild(th2);
     table.appendChild(tr1);
     th1.innerHTML = "Cash";
-    th2.innerHTML = "Amount";
+    th2.innerHTML = "In stock";
     document.getElementById('drawTable').appendChild(table);
     for(let i = (drawObj.change.length - 1); i >= 0; i--){
         let cell = document.createElement('tr');
