@@ -93,7 +93,7 @@ function drawPrint(){
     tr1.appendChild(th2);
     table.appendChild(tr1);
     th1.innerHTML = "Cash";
-    th2.innerHTML = "In stock";
+    th2.innerHTML = "In stock, $";
     document.getElementById('drawTable').appendChild(table);
     for(let i = (drawObj.change.length - 1); i >= 0; i--){
         let cell = document.createElement('tr');
