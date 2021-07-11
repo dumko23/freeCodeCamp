@@ -10,10 +10,8 @@ let drawObj = {
     change: []
 };
 
-
 function checkCashRegister(price, cash) {
     let change = cash - price;
-    console.log(change)
     let hundred = ["ONE HUNDRED", Math.floor(change / 100) * 100];
     let twenty = ["TWENTY", Math.floor((change - hundred[1]) / 20) * 20];
     let ten = ["TEN", Math.floor((change - hundred[1] - twenty[1]) / 10) * 10];
@@ -25,7 +23,6 @@ function checkCashRegister(price, cash) {
     let penny = ["PENNY", Math.floor((change - hundred[1] - twenty[1] - ten[1] - five[1] - one[1] - quarter[1] - dime[1] - nickel[1]).toFixed(2) / 0.01) * 0.01];
 
     let drawArr = [penny, nickel, dime, quarter, one, five, ten, twenty, hundred];
-
 
     let cidTotal = 0;
     let drawTotal = 0;
@@ -84,22 +81,9 @@ function statusPrint(){
     ["ONE", 10], ["FIVE", 5], ["TEN", 4], ["TWENTY", 5], ["ONE HUNDRED", 2]]));*/
 
 function drawPrint(){
-    /*let childNodes = document.querySelectorAll("table > tr:not(#staticTr");
-    console.log(childNodes.length)
-    if(childNodes.length > 0){
-        for(let i = 0; i < childNodes.length; i++){
-            console.log(childNodes[i]);
-            let child = childNodes[i];
-            document.getElementById('drawTable').removeChild(child);
-        }
-    }*/
-
     if(document.getElementById('drawTable').hasChildNodes()){
-        console.log(document.getElementById('drawTable').lastChild)
         document.getElementById('drawTable').removeChild(document.getElementById('drawTable').lastChild);
     }
-    console.log(document.getElementById('drawTable').lastChild);
-    console.log(drawObj.change);
     let table = document.createElement('table');
     table.style.border = '2px solid black';
     table.border = "black";
@@ -113,7 +97,7 @@ function drawPrint(){
     th1.innerHTML = "Cash";
     th2.innerHTML = "Amount";
     document.getElementById('drawTable').appendChild(table);
-    for(let i = 0; i < drawObj.change.length; i++){
+    for(let i = (drawObj.change.length - 1); i >= 0; i--){
         let cell = document.createElement('tr');
         let firstCell = document.createElement('td');
         let secondCell = document.createElement('td');
@@ -123,7 +107,6 @@ function drawPrint(){
         firstCell.innerHTML = drawObj.change[i][0];
         secondCell.innerHTML = drawObj.change[i][1];
     }
-    console.log(document.getElementById('drawTable').lastChild)
     clearStatusNChange()
 }
 
