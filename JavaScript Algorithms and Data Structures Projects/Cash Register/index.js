@@ -12,7 +12,7 @@ let drawObj = {
 
 function checkCashRegister(price, cash) {
     let change = cash - price;
-    document.getElementById('total').innerHTML = change;
+    document.getElementById('total').innerHTML = change + '$';
     let hundred = ["ONE HUNDRED", Math.floor(change / 100) * 100];
     let twenty = ["TWENTY", Math.floor((change - hundred[1]) / 20) * 20];
     let ten = ["TEN", Math.floor((change - hundred[1] - twenty[1]) / 10) * 10];
