@@ -1,6 +1,12 @@
+body{
+  background-color: Goldenrod;
+  font-family: 'Inconsolata', monospace;
+  
+}
 table{
     border: 2px solid black;
     width: 200px;
+  text-align: center;
 }
 
 .cidTd{
@@ -14,40 +20,62 @@ table{
 }
 .inputDiv{
     flex-direction: column;
-    width: 200px;
+    
     display: flex;
 }
 #inputDiv{
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    width: 100%;
+    justify-content: space-around;
 }
+
 #btnDiv{
     display: flex;
     flex-direction: column;
     margin-top: 10px;
+  margin-bottom: 10px;
 }
 #changeDiv{
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-around;
-    margin: 10px;
+    width: 100%;
 }
-#cidDiv{
-    width: 200px;
-    margin: 0 10px;
-}
-#drawDiv{
-    width: 200px;
-    margin: 0 10px;
+.cdt-div{
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  width: 100%;
 }
 #totalDiv{
-    width: 200px;
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
 }
 #total{
-    margin-left: 10px;
+  margin-left: 10px;
+}
+footer{
+  text-align: center;
+  margin-top: 20px;
+}
+#statusDiv{
+  text-align: center;
+}
+button{
+  padding: 10px;
+}
+@media (max-width: 460px){
+  #inputDiv{
+    flex-direction: column;
+  }
+  #changeDiv{
+    flex-direction: column;
+  }
+  .cdt-div{
+    width: 100%;
+  }
 }
