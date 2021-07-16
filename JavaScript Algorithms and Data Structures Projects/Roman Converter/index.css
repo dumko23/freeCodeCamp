@@ -1,18 +1,24 @@
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
-
+  
 }
+body{
+    background-color: DarkSlateGray;
+  font-family: 'Encode Sans SC', sans-serif;
+  justify-content: center;
+  }
 #main{
     margin-top: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
+  justify-content: center;
 
 }
 .component{
     width: 400px;
-    padding: 20px;
+    /*padding: 20px;*/
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -33,6 +39,7 @@ h3{
     display: flex;
     align-items: center;
     justify-content: center;
+  background-color: white;
 
 }
 input{
@@ -45,12 +52,22 @@ input{
     text-align: center;
 }
 button{
+  margin-top: 5px;
     padding: 10px 50px;
     border-radius: 3px;
     display: block;
     width: 100%;
+  background-color: tomato;
 }
 footer{
-    position: absolute;
-    bottom: 0;
+  margin-top: 30px;
+    text-align: center;
+}
+@media (max-width: 460px){
+  .component{
+    width: 100%;
+  }
+  #results{
+    width: 100%;
+  }
 }
