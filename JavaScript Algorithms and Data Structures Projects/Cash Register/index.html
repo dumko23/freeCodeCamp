@@ -30,7 +30,7 @@
         <button id="drawBtn" onclick="checkCashRegister(document.getElementById('price').value, document.getElementById('cash').value); statusPrint(); drawPrint(); ">Let's Draw!</button>
     </div>
     <div id="changeDiv">
-        <div id="cidDiv">
+        <div id="cidDiv" class="cdt-div">
             <h3>Available cash:</h3>
             <table border="2px">
                 <tr>
@@ -75,13 +75,13 @@
                 </tr>
             </table>
         </div>
-        <div id="drawDiv">
+        <div class="cdt-div" id="drawDiv">
             <h3>Your draw:</h3>
             <div id="drawTable">
 
             </div>
         </div>
-        <div id="totalDiv">
+        <div class="cdt-div" id="totalDiv">
             <h3> Total: </h3>
             <h3 id="total"></h3>
         </div>
@@ -91,5 +91,8 @@
         <p id="statusId"></p>
     </div>
 </div>
+<footer>
+  by Dima Parkhomenko
+  </footer>
 </body>
 </html>
